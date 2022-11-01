@@ -11,3 +11,6 @@
 
 2. SUDAH MELAKSANAKAN KEGIATAN MEMAHAMI JOBDESC SYSTEM ANALYST
 - Pada waktu ini saya di perintahkan untuk memahami tentang Jobdesc System Analyst dan mendiskusikan dengan pihak #ARPATEAM terkait jobdesc ini
+
+3. BRIEFING PROJECT 1
+- Project pertama ini saya diperintahkan untuk menganalisis website https://kemenkumham.go.id/ & https://law.ui.ac.id/
