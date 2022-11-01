@@ -17,3 +17,8 @@
 
 4. EVALUASI & PENYERAHAN HASIL ANALASIS PROJECT 1
 - Hasilnya cukup bagus, websitenya bisa diakses di laman https://www.kpsfhuad.com/
+
+5. BRIEFING PROJECT 2
+- Project kedua ini saya diperintahkan untuk menganalisis website https://travelpalembang.co.id/
+- Dengan hal yang di analisis sama seperti Project 1
+- Untuk Project 2 ini coba kamu buat analisisnya seperti Project 1
