@@ -25,3 +25,6 @@
 
 6. EVALUASI & PENYERAHAN HASIL ANALASIS PROJECT 2
 - Hasilnya cukup bagus, dan websitenya akan segera di kembangkan
+
+7. EVALUASI HASIL PROSES MAGANG
+Setelah magang di #ARPATEAM banyak hal yang saya dapatkan, terutama bagaimana cara menganalisis suatu website sebelum masuk proses produksi.
