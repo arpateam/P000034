@@ -14,3 +14,6 @@
 
 3. BRIEFING PROJECT 1
 - Project pertama ini saya diperintahkan untuk menganalisis website http://p-www.iwate-pu.ac.jp/~prima/ & https://researchers.mq.edu.au/en/persons/subhas-mukhopadhyay
+
+4. EVALUASI & PENYERAHAN HASIL ANALASIS PROJECT 1
+- Hasilnya cukup bagus, websitenya bisa diakses di laman https://www.ceerduad.com
