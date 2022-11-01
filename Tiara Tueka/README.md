@@ -22,3 +22,6 @@
 - Project kedua ini saya diperintahkan untuk menganalisis website https://www.cettatourtravel.com/
 - Dengan hal yang di analisis sama seperti Project 1
 - Untuk Project 2 ini coba kamu buat analisisnya seperti Project 1
+
+6. EVALUASI & PENYERAHAN HASIL ANALASIS PROJECT 2
+- Hasilnya cukup bagus, dan websitenya akan segera di kembangkan
