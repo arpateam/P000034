@@ -14,3 +14,6 @@
 
 3. BRIEFING PROJECT 1
 - Project pertama ini saya diperintahkan untuk menganalisis website https://kemenkumham.go.id/ & https://law.ui.ac.id/
+
+4. EVALUASI & PENYERAHAN HASIL ANALASIS PROJECT 1
+- Hasilnya cukup bagus, websitenya bisa diakses di laman https://www.kpsfhuad.com/
