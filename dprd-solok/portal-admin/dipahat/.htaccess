@@ -1,0 +1,112 @@
+## Turn on rewrite engine
+RewriteEngine on
+Options -Indexes +FollowSymLinks
+
+# Remove trailing slash from non-filepath urls
+#RewriteCond %{REQUEST_URI} /(.+)/$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^ https://www.dipahat.my.id/%1 [R=301,L]
+
+# Include trailing slash on directory 
+#RewriteCond %{REQUEST_URI} !(.+)/$
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^(.+)$ https://www.dipahat.my.id/$1/ [R=301,L]
+
+# Force HTTPS and WWW 
+#RewriteCond %{HTTP_HOST} !^www\.(.*)$ [OR,NC]
+#RewriteCond %{https} off  
+#RewriteRule ^(.*)$ https://www.dipahat.my.id/$1 [R=301,L]
+
+# Handle my links
+RewriteRule ^$ login.php [L]
+RewriteRule ^masuk$ login.php [L]
+RewriteRule ^keluar-admin$ logout.php [L]
+RewriteRule ^keluar-edit$ logout-edit.php [L]
+
+RewriteRule ^dashboard$ template.php?module=dashboard [L]
+
+RewriteRule ^page/beranda$ template.php?module=halaman&id=1 [L]
+
+RewriteRule ^page/diagnosis-penyakit$ template.php?module=halaman&id=2 [L]
+RewriteRule ^page/konsultasi$ template.php?module=halaman&id=3 [L]
+RewriteRule ^page/bantuan$ template.php?module=halaman&id=4 [L]
+RewriteRule ^page/akun$ template.php?module=halaman&id=5 [L]
+
+RewriteRule ^editPage$ appweb/Controllers/Pages.php?act=edit [L]
+
+
+RewriteRule ^data-penyakit$ template.php?module=data-penyakit&act=daftar [L]
+RewriteRule ^addDataPenyakit$ appweb/Controllers/DataPenyakit.php?act=add-data-penyakit [L]
+RewriteRule ^editDataPenyakit$ appweb/Controllers/DataPenyakit.php?act=edit-data-penyakit [L]
+RewriteRule ^actionDeleteDataPenyakit/([a-zA-Z0-9-]+)$ appweb/Controllers/DataPenyakit.php?act=delete-data-penyakit&id=$1 [L]
+
+
+RewriteRule ^data-gejala$ template.php?module=data-gejala&act=daftar [L]
+RewriteRule ^addDataGejala$ appweb/Controllers/DataGejala.php?act=add-data-gejala [L]
+RewriteRule ^editDataGejala$ appweb/Controllers/DataGejala.php?act=edit-data-gejala [L]
+RewriteRule ^actionDeleteDataGejala/([a-zA-Z0-9-]+)$ appweb/Controllers/DataGejala.php?act=delete-data-gejala&id=$1 [L]
+
+
+RewriteRule ^data-relasi$ template.php?module=data-relasi&act=daftar [L]
+RewriteRule ^addDataRelasi$ appweb/Controllers/DataRelasi.php?act=add-data-relasi [L]
+RewriteRule ^editDataRelasi$ appweb/Controllers/DataRelasi.php?act=edit-data-relasi [L]
+RewriteRule ^actionDeleteDataRelasi/([a-zA-Z0-9-]+)$ appweb/Controllers/DataRelasi.php?act=delete-data-relasi&id=$1 [L]
+
+
+RewriteRule ^data-solusi$ template.php?module=data-solusi&act=daftar [L]
+RewriteRule ^addDataSolusi$ appweb/Controllers/DataSolusi.php?act=add-data-solusi [L]
+RewriteRule ^editDataSolusi$ appweb/Controllers/DataSolusi.php?act=edit-data-solusi [L]
+RewriteRule ^actionDeleteDataSolusi/([a-zA-Z0-9-]+)$ appweb/Controllers/DataSolusi.php?act=delete-data-solusi&id=$1 [L]
+
+
+RewriteRule ^bantuan$ template.php?module=bantuan&act=daftar-bantuan [L]
+RewriteRule ^addBantuan$ appweb/Controllers/Bantuan.php?act=add-bantuan [L]
+RewriteRule ^editBantuan$ appweb/Controllers/Bantuan.php?act=edit-bantuan [L]
+RewriteRule ^actionDeleteBantuan/([0-9]+)$ appweb/Controllers/Bantuan.php?act=delete-bantuan&id=$1 [L]
+
+
+RewriteRule ^data-akun$ template.php?module=data-akun&act=daftar-data-akun [L]
+
+
+RewriteRule ^pengaturan$ template.php?module=pengaturan&act=daftar-pengaturan [L]
+RewriteRule ^editPengaturan$ appweb/Controllers/Settings.php?act=edit-pengaturan [L]
+
+RewriteRule ^sitemap$ template.php?module=sitemap&act=sitemap [L]
+RewriteRule ^sitemap/([a-z0-9-]+)$ template.php?module=sitemap&act=daftar-sitemap&slug=$1 [L]
+
+RewriteRule ^addSitemap$ appweb/Controllers/Sitemap.php?act=add-sitemap [L]
+RewriteRule ^editSitemap$ appweb/Controllers/Sitemap.php?act=edit-sitemap [L]
+RewriteRule ^actionDeleteSitemap/([0-9]+)/([a-z0-9-]+)$ appweb/Controllers/Sitemap.php?act=delete-sitemap&id=$1&slug=$2 [L]
+
+RewriteRule ^pegawai$ template.php?module=pegawai&act=daftar-pegawai [L]
+RewriteRule ^pegawai/([0-9]+)$ template.php?module=pegawai&act=detail-pegawai&id=$1 [L]
+RewriteRule ^pegawai/profil$ template.php?module=pegawai&act=profil&id=$1 [L]
+
+RewriteRule ^addPegawai$ appweb/Controllers/Pegawai.php?act=add-pegawai [L]
+RewriteRule ^editPegawai$ appweb/Controllers/Pegawai.php?act=edit-pegawai [L]
+RewriteRule ^editPassword$ appweb/Controllers/Pegawai.php?act=edit-password [L]
+RewriteRule ^editProfil$ appweb/Controllers/Pegawai.php?act=edit-profil [L]
+RewriteRule ^editPasswordProfil$ appweb/Controllers/Pegawai.php?act=edit-password-profil [L]
+RewriteRule ^aktifkanPegawai/(.*)$ appweb/Controllers/Pegawai.php?act=aktifkan-pegawai&id=$1 [L]
+RewriteRule ^nonAktifkanPegawai/(.*)$ appweb/Controllers/Pegawai.php?act=non-aktifkan-pegawai&id=$1 [L]
+RewriteRule ^resetSession$ appweb/Controllers/Pegawai.php?act=reset-session [L]
+
+RewriteRule ^ImgHandlingFroala$ appweb/Controllers/FroalaImgHandling.php [L]
+RewriteRule ^FileHandlingFroala$ appweb/Controllers/FroalaFileHandling.php [L]
+
+##### Deny access to htaccess ###############################
+<files .htaccess>
+    order allow,deny
+    deny from all
+</files>
+
+##### Not Found ###############################
+ErrorDocument 404 /appweb/Views/404.php
+##### Forbidden ###############################
+ErrorDocument 403 /appweb/Views/403.php
+##### Internal Server Error
+ErrorDocument 500 /appweb/Views/500.php
+##### Bad Request ###############################
+ErrorDocument 400 /appweb/Views/400.php
+##### Unauthorised ###############################
+ErrorDocument 401 /appweb/Views/401.php
